@@ -4,23 +4,6 @@ export default class SinglyLinkedList {
 
         
     constructor() {
-    /*const node1 = { data: 'C' };
-    const node2 = { data: 'A' };
-    const node3 = { data: 'T' };
-    
-        node1.next = node2;
-        node2.next = node3;
-        node3.next = null;
-        
-        // og hvis det er en dobbelthægtet liste, sætter du dem også til at pege tilbage
-        node1.prev = null;
-        node2.prev = node1;
-        node3.prev = node2;
-        
-        // og endelig sætter du_head og eventuelt tail til at pege på listen
-        this.head = node1;
-        this.#size = 3;
-        */
         this.head = null;
         this.#size = 0;
     }
