@@ -110,11 +110,20 @@ class Node {
     }
 
     replaceChild(newChild, oldChild) {
+        // Check that oldChild is indeed a child of this node
         const index = this.childNodes.indexOf(oldChild);
         if (index === -1) {
             throw new Error("Child node not found");
         }
-        oldChild.value = newChild.value;
+        // Add all children from oldChild to newChild
+        for (let child of oldChild.childNodes) {
+            newChild.appendChild(child);
+        }
+        // Insert newChild in place of oldChild in parents children array
+        this.childNodes[index] = newChild;
+        newChild.parent = this;
+        oldChild.parent = null;
+        
     }
 }
 /*
