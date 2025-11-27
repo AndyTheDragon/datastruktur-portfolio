@@ -117,8 +117,9 @@ class Node {
         oldChild.value = newChild.value;
     }
 }
-
+/*
 let mynode = new Node(10);
 let myroot = new Node(2);
 myroot.appendChild(mynode);
 console.log(myroot);
+*/
